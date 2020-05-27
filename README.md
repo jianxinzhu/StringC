@@ -1,1 +1,1 @@
-# StringC-
+# StringC
