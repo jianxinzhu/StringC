@@ -13,7 +13,7 @@ void printStatistic(const string& str)
 }
 int main()
 {
-	string str = "Hello World, Welcome to C++ and Welcome to Visual World";
+	string str = "Hello World Welcome to C++ and Welcome to Visual World";
 	int location;
 	cout << "The string is: \n" << str << boolalpha;
 	printStatistic(str);
@@ -28,5 +28,16 @@ int main()
 	location = str.find_last_of("misop");
 	cout << "\n(find_last_of) found " << "'" << str[location] << "'" << " from the group at "
 		<< location << endl;
+
+	str.erase(11);
+	cout << "After erase: " << str << endl;
+
+	size_t position = str.find(" ");
+	while (position != string::npos)
+	{
+		str.replace(position, 1, ".");
+		position = str.find(" ", position + 1);
+	}
+	cout << str << endl;
 
 }
