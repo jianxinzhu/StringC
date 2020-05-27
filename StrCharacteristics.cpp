@@ -40,4 +40,11 @@ int main()
 	}
 	cout << str << endl;
 
+	string str2 = " How to Programming C++";
+	str.insert(str.size(), str2);
+
+	cout << "After the insertion: " << str << endl;
+
+
+
 }
