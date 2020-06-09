@@ -1,0 +1,46 @@
+/*   name: jianxin zhu
+     date: june/08/2020
+*/
+
+#include<iostream>
+#include<string>
+#include<iterator>
+
+using namespace std;
+bool stringPalindrome(string& s1)
+{
+	string s2;
+	bool result = false;
+
+	string::reverse_iterator rb = s1.rbegin();
+
+	while (rb != s1.rend())
+	{
+		s2 += *(rb++);
+	}
+
+	if (s1 == s2)
+	{
+		result = true;
+	}
+
+	return result;
+}
+
+
+int main()
+{
+	string s1;
+	cout << "Enter a string, check it is PALINDROME: ";
+
+	getline(cin, s1);
+	cout << endl;
+
+
+
+
+	cout << "The string you enter is: " << s1 << endl;
+
+	cout << "The string is: " << (stringPalindrome(s1) ? " PALINDROMER" : " NOT PALINDROMER") << endl;
+
+}
